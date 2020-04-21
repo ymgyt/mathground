@@ -1,7 +1,7 @@
-use num_traits::{Num, NumCast, Float};
+use num_traits::{Float, Num, NumCast};
 
 // 偏差値
-pub fn standard_score<N: Float>(x:N, avg:N, standard_deviation:N) -> N {
+pub fn standard_score<N: Float>(x: N, avg: N, standard_deviation: N) -> N {
     (x - avg) / standard_deviation * N::from(10.0).unwrap() + N::from(50.).unwrap()
 }
 
@@ -63,7 +63,13 @@ mod tests {
         // 平成30年大学入試センター数学1A
         let avg = 61.91;
         let sd = 18.69;
-        assert_eq!(format!("{:.2}",59.68), format!("{:.2}", standard_score(80., avg, sd)));
-        assert_eq!(format!("{:.2}",70.38), format!("{:.2}", standard_score(100., avg, sd)));
+        assert_eq!(
+            format!("{:.2}", 59.68),
+            format!("{:.2}", standard_score(80., avg, sd))
+        );
+        assert_eq!(
+            format!("{:.2}", 70.38),
+            format!("{:.2}", standard_score(100., avg, sd))
+        );
     }
 }
