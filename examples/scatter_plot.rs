@@ -14,5 +14,7 @@ fn main() -> anyhow::Result<()> {
     ];
 
     let scatter = stats::ScatterPlot::with(data);
-    scatter.render_svg("scatter.svg").map_err(anyhow::Error::from)
+    scatter
+        .render_svg("scatter.svg")
+        .map_err(anyhow::Error::from)
 }

@@ -36,7 +36,7 @@ impl ScatterPlot {
         let view = ContinuousView::new()
             .add(plot)
             .x_range(x_range.0, x_range.1)
-            .y_range(y_range.0, y_range.1)
+            .y_range(y_range.0, y_range.1);
 
         let page = Page::single(&view);
         page.save(path)
