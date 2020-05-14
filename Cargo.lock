@@ -93,6 +93,7 @@ dependencies = [
  "num-traits",
  "plotlib",
  "rand",
+ "statrs",
  "svg",
 ]
 
@@ -185,6 +186,15 @@ name = "rustc-demangle"
 version = "0.1.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4c691c0e608126e00913e33f0ccf3727d5fc84573623b8d65b2df340b5201783"
+
+[[package]]
+name = "statrs"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cce16f6de653e88beca7bd13780d08e09d4489dbca1f9210e041bc4852481382"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "svg"
