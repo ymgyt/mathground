@@ -5,8 +5,7 @@ fn main() -> anyhow::Result<()> {
     let data = gen_data(1.0, 101.0, 100);
     let p = stats::Population::with(data);
     let samples = vec![5, 10, 50, 100];
-    let mut v = plotlib::view::ContinuousView::new()
-        .x_range(0.0, 100.0);
+    let mut v = plotlib::view::ContinuousView::new().x_range(0.0, 100.0);
 
     for sample_size in samples {
         let mut dist = BTreeMap::new();
