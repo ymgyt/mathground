@@ -1,3 +1,4 @@
 /target
 *.svg
 !examples/*.svg
+.idea
