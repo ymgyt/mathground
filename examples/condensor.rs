@@ -1,7 +1,7 @@
 use plotlib::page::Page;
 use plotlib::repr::Plot;
+use plotlib::style::{LineStyle, PointMarker};
 use plotlib::view::ContinuousView;
-use plotlib::style::{PointMarker, LineStyle};
 
 fn main() {
     let v = 9.0;
@@ -20,11 +20,8 @@ fn main() {
             .colour("#003355"),
     ); // and a custom colour
 
-
     // The 'view' describes what set of data is drawn
-    let v = ContinuousView::new()
-        .add(s1)
-        .add(s2);
+    let v = ContinuousView::new().add(s1).add(s2);
 
     // A page with a single view is then saved to an SVG file
     Page::single(&v).save("scatter.svg").unwrap();
